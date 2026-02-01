@@ -89,11 +89,6 @@ function FindProxyForURL(url, host) {
                 "PROXY 161.0.0.206:20000; " +
                 "PROXY 172.252.57.114:20000; " +
                 "PROXY 161.0.0.207:20000; " +
-                "PROXY 188.42.15.245:20000; " +
-                "PROXY 172.252.57.110:20000; " +
-                "PROXY 172.252.57.111:20000; " +
-                "PROXY 172.252.57.112:20000; " +
-                "PROXY 172.252.57.113:20000; " +
                 "DIRECT"
             );
         }
@@ -102,4 +97,5 @@ function FindProxyForURL(url, host) {
     // Остальное напрямую
     return "DIRECT";
 }
+
 
