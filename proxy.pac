@@ -1,45 +1,84 @@
 function FindProxyForURL(url, host) {
-
-    // Домены, которые должны идти через прокси (YouTube, 4pda, 2ip.ru)
+    // Оптимизированный список: wildcard для сабдоменов, без дублей
     var proxiedDomains = [
-        "youtube.com",
-        "www.youtube.com",
-        "m.youtube.com",
-        "music.youtube.com",
-        "studio.youtube.com",
-        "gaming.youtube.com",
-        "tv.youtube.com",
-        "kids.youtube.com",
-        "live.youtube.com",
-        "creator.youtube.com",
-        "accounts.youtube.com",
-        "i.ytimg.com",
-        "ytimg.com",
-        "googlevideo.com",
+        // YouTube/Google
+        "*.youtube.com",
+        "*.googlevideo.com",
+        "*.ytimg.com",
         "ggpht.com",
-        "4pda.ru",
-        "www.4pda.ru",
-        "2ip.ru"
+        
+        // Форумы/Торренты
+        "*.4pda.ru",
+        "2ip.ru",
+        "nnmclub.to",
+        "*.rutracker.*",
+        "t-ru.org",
+        "rutrk.org",
+        "rutracker.wiki",
+        "kinozal.tv",
+        "lostfilm.tv",
+        "rutor.org",
+        
+        // Speedtest
+        "*.speedtest.co",
+        "*.speedtest.net",
+        
+        // Соцсети: Instagram/Facebook
+        "*.instagram.com",
+        "ig.me",
+        "*.facebook.com",
+        "*.fbcdn.net",
+        "*.fbsbx.com",
+        "facebook.net",
+        
+        // Twitter/X
+        "*.twitter.com",
+        "*.x.com",
+        "t.co",
+        "twimg.com",
+        "tweetdeck.com",
+        
+        // WhatsApp/Viber
+        "*.whatsapp.com",
+        "*.whatsapp.net",
+        "*.viber.com",
+        
+        // Telegram/Discord
+        "*.telegram.org",
+        "*.t.me",
+        "*.discord.com",
+        "*.discord.gg",
+        "*.discordapp.com",
+        "*.discordapp.net",
+        "*.discord.media",
+        "discord.co",
+        "cdn.discordapp.com",
+        "media.discordapp.net",
+        "gateway.discord.gg",
+        
+        // Другие (Dell, Intel, VMWare и т.д.)
+        "*.dell.com",
+        "*.dellcdn.com",
+        "*.intel.com",
+        "dsadata.intel.com",
+        "redis.io",
+        "*.veeam.com",
+        "vagrantcloud.com",
+        "*.vmware.com",
+        "*.broadcom.com",
+        "graylog.org",
+        "resp.app",
+        "collaboraonline.com",
+        "iplist.opencck.org"
     ];
 
-    // Проверяем, попадает ли хост в список проксируемых доменов
+    // Проверка с shExpMatch (лучше dnsDomainIs для Android/мобильных)
     for (var i = 0; i < proxiedDomains.length; i++) {
-        if (dnsDomainIs(host, proxiedDomains[i])) {
-            // Возвращаем цепочку прокси: главный → резервные → DIRECT
-            return (
-                "PROXY 161.0.0.206:20000; " +
-                "PROXY 172.252.57.114:20000; " +
-                "PROXY 161.0.0.207:20000; " +
-                "PROXY 188.42.15.245:20000; " +
-                "PROXY 172.252.57.110:20000; " +
-                "PROXY 172.252.57.111:20000; " +
-                "PROXY 172.252.57.112:20000; " +
-                "PROXY 172.252.57.113:20000; " +
-                "DIRECT"
-            );
+        if (shExpMatch(host, proxiedDomains[i])) {
+            return "PROXY 161.0.0.206:20000; PROXY 172.252.57.114:20000; PROXY 161.0.0.207:20000; DIRECT";
         }
     }
 
-    // Все остальные домены — напрямую
+    // Остальное напрямую
     return "DIRECT";
 }
