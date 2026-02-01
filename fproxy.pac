@@ -9,14 +9,18 @@ function FindProxyForURL(url, host) {
         
         // Форумы/Торренты
         "*.4pda.ru",
+        "4pda.ru",
         "2ip.ru",
         "nnmclub.to",
         "*.rutracker.*",
+        "*rutracker.*",
         "t-ru.org",
         "rutrk.org",
         "rutracker.wiki",
         "kinozal.tv",
+        "*.kinozal.tv",
         "lostfilm.tv",
+        "www.lostfilm.tv",
         "rutor.org",
         
         // Speedtest
@@ -40,13 +44,19 @@ function FindProxyForURL(url, host) {
         
         // WhatsApp/Viber
         "*.whatsapp.com",
+        "whatsapp.com",
         "*.whatsapp.net",
+        "whatsapp.net",
         "*.viber.com",
+        "viber.com",
         
         // Telegram/Discord
         "*.telegram.org",
+        "telegram.org",
         "*.t.me",
+        "t.me",
         "*.discord.com",
+        "discord.com",
         "*.discord.gg",
         "*.discordapp.com",
         "*.discordapp.net",
