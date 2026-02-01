@@ -40,6 +40,7 @@ function FindProxyForURL(url, host) {
         
         // WhatsApp/Viber (добавлены все новые домены)
         "*.whatsapp.com",
+        "whatsapp.com",
         "*.whatsapp.net",
         "wa.me",
         "*.wl.co",
@@ -49,6 +50,7 @@ function FindProxyForURL(url, host) {
         "*.whatsapp-plus.*",
         "whatsapp.info",
         "*.viber.com",
+        "viber.com",
         
         // Telegram/Discord
         "*.telegram.org",
@@ -97,5 +99,6 @@ function FindProxyForURL(url, host) {
     // Остальное напрямую
     return "DIRECT";
 }
+
 
 
