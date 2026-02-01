@@ -52,7 +52,9 @@ function FindProxyForURL(url, host) {
         
         // Telegram/Discord
         "*.telegram.org",
+        "telegram.org",
         "*.t.me",
+        "discord.com",
         "*.discord.com",
         "*.discord.gg",
         "*.discordapp.com",
@@ -100,3 +102,4 @@ function FindProxyForURL(url, host) {
     // Остальное напрямую
     return "DIRECT";
 }
+
