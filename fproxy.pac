@@ -69,6 +69,7 @@ function FindProxyForURL(url, host) {
         
         // Другие (Dell, Intel, VMWare и т.д.)
         "*.dell.com",
+        "dell.com",
         "*.dellcdn.com",
         "*.intel.com",
         "dsadata.intel.com",
@@ -80,6 +81,7 @@ function FindProxyForURL(url, host) {
         "graylog.org",
         "resp.app",
         "collaboraonline.com",
+        "proxycove.com",
         "iplist.opencck.org"
     ];
 
@@ -99,6 +101,7 @@ function FindProxyForURL(url, host) {
     // Остальное напрямую
     return "DIRECT";
 }
+
 
 
 
