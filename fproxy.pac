@@ -84,6 +84,8 @@ function FindProxyForURL(url, host) {
         "collaboraonline.com",
         "proxycove.com",
         "chatgpt.com",
+        "msn.com",
+       "*.msn.com",
         "iplist.opencck.org"
     ];
 
@@ -103,6 +105,7 @@ function FindProxyForURL(url, host) {
     // Остальное напрямую
     return "DIRECT";
 }
+
 
 
 
