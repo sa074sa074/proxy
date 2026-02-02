@@ -86,6 +86,7 @@ function FindProxyForURL(url, host) {
         "chatgpt.com",
         "msn.com",
        "*.msn.com",
+       "www.msn.com",
         "iplist.opencck.org"
     ];
 
@@ -105,6 +106,7 @@ function FindProxyForURL(url, host) {
     // Остальное напрямую
     return "DIRECT";
 }
+
 
 
 
