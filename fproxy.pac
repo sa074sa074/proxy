@@ -83,6 +83,7 @@ function FindProxyForURL(url, host) {
         "resp.app",
         "collaboraonline.com",
         "proxycove.com",
+        "chatgpt.com",
         "iplist.opencck.org"
     ];
 
@@ -102,6 +103,7 @@ function FindProxyForURL(url, host) {
     // Остальное напрямую
     return "DIRECT";
 }
+
 
 
 
