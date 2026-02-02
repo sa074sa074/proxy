@@ -3,6 +3,7 @@ function FindProxyForURL(url, host) {
     var proxiedDomains = [
         // YouTube/Google
         "*.youtube.com",
+        "youtube.com",
         "*.googlevideo.com",
         "*.ytimg.com",
         "ggpht.com",
@@ -101,6 +102,7 @@ function FindProxyForURL(url, host) {
     // Остальное напрямую
     return "DIRECT";
 }
+
 
 
 
