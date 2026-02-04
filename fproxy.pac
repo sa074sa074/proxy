@@ -93,6 +93,8 @@ function FindProxyForURL(url, host) {
        "www.msn.com",
         "microsoft.com",
        "*.microsoft.com",
+        "amnezia.org",
+       "*.amnezia.org",
         "iplist.opencck.org"
     ];
 
@@ -112,6 +114,7 @@ function FindProxyForURL(url, host) {
     // Остальное напрямую
     return "DIRECT";
 }
+
 
 
 
