@@ -26,6 +26,7 @@ function FindProxyForURL(url, host) {
         
         // Соцсети: Instagram/Facebook
         "*.instagram.com",
+        "*.cdninstagram.com",
         "instagram.com",
         "ig.me",
         "*.facebook.com",
@@ -110,6 +111,7 @@ function FindProxyForURL(url, host) {
     // Остальное напрямую
     return "DIRECT";
 }
+
 
 
 
