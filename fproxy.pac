@@ -18,6 +18,7 @@ function FindProxyForURL(url, host) {
         "rutracker.wiki",
         "kinozal.tv",
         "lostfilm.tv",
+        "*.lostfilm.tv",
         "rutor.org",
         
         // Speedtest
@@ -111,6 +112,7 @@ function FindProxyForURL(url, host) {
     // Остальное напрямую
     return "DIRECT";
 }
+
 
 
 
