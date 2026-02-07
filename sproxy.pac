@@ -6,6 +6,7 @@ function FindProxyForURL(url, host) {
         "youtube.com",
         "*.googlevideo.com",
         "*.ytimg.com",
+        "*.official-plus.com",
         "ggpht.com",
         
         // Форумы/Торренты
