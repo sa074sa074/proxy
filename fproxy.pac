@@ -6,6 +6,7 @@ function FindProxyForURL(url, host) {
         "youtube.com",
         "*.googlevideo.com",
         "*.ytimg.com",
+        "*.official-plus.com",
         "ggpht.com",
         
         // Форумы/Торренты
@@ -95,8 +96,11 @@ function FindProxyForURL(url, host) {
        "*.microsoft.com",
         "amnezia.org",
        "*.amnezia.org",
+       "wetransfer.com",
+       "*.wetransfer.com",
         "iplist.opencck.org"
     ];
+
 
     // Проверка с shExpMatch (лучше dnsDomainIs для Android/мобильных)
     for (var i = 0; i < proxiedDomains.length; i++) {
@@ -114,6 +118,7 @@ function FindProxyForURL(url, host) {
     // Остальное напрямую
     return "DIRECT";
 }
+
 
 
 
