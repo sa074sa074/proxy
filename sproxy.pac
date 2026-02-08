@@ -96,6 +96,8 @@ function FindProxyForURL(url, host) {
        "*.microsoft.com",
         "amnezia.org",
        "*.amnezia.org",
+       "wetransfer.com",
+       "*.wetransfer.com",
         "iplist.opencck.org"
     ];
 
