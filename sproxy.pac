@@ -21,6 +21,7 @@ function FindProxyForURL(url, host) {
         "lostfilm.tv",
         "*.lostfilm.tv",
         "rutor.org",
+        "rutracker.org",
         
         // Speedtest
         "*.speedtest.co",
