@@ -49,6 +49,7 @@ function FindProxyForURL(url, host) {
         "*.whatsapp.com",
         "whatsapp.com",
         "*.whatsapp.net",
+        "*whatsapp.net",
         "wa.me",
         "*.wl.co",
         "whatsappbrand.com",
