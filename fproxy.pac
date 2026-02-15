@@ -21,11 +21,17 @@ function FindProxyForURL(url, host) {
         "lostfilm.tv",
         "*.lostfilm.tv",
         "rutor.org",
+        "rutracker.org",
         
         // Speedtest
         "*.speedtest.co",
         "*.speedtest.net",
-        
+
+       //cloudflare и др
+       "*.cloudflareaccess.com",
+       "*.cloudflare.com",
+       
+
         // Соцсети: Instagram/Facebook
         "*.instagram.com",
         "*.cdninstagram.com",
@@ -45,9 +51,13 @@ function FindProxyForURL(url, host) {
         "tweetdeck.com",
         
         // WhatsApp/Viber (добавлены все новые домены)
+        "web.whatsapp.com",
+        "*whatsapp.com",
         "*.whatsapp.com",
         "whatsapp.com",
+        "*whatsapp.net",
         "*.whatsapp.net",
+        "whatsapp.net",
         "wa.me",
         "*.wl.co",
         "whatsappbrand.com",
@@ -102,6 +112,7 @@ function FindProxyForURL(url, host) {
     ];
 
 
+
     // Проверка с shExpMatch (лучше dnsDomainIs для Android/мобильных)
     for (var i = 0; i < proxiedDomains.length; i++) {
         if (shExpMatch(host, proxiedDomains[i])) {
@@ -118,6 +129,7 @@ function FindProxyForURL(url, host) {
     // Остальное напрямую
     return "DIRECT";
 }
+
 
 
 
