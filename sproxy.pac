@@ -29,6 +29,7 @@ function FindProxyForURL(url, host) {
 
        //cloudflare и др
        "*.cloudflareaccess.com",
+       "*.cloudflare.com",
        
 
         // Соцсети: Instagram/Facebook
@@ -53,7 +54,7 @@ function FindProxyForURL(url, host) {
         "*.whatsapp.com",
         "whatsapp.com",
         "*.whatsapp.net",
-        "*whatsapp.net",
+        "whatsapp.net",
         "wa.me",
         "*.wl.co",
         "whatsappbrand.com",
