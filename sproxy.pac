@@ -26,7 +26,11 @@ function FindProxyForURL(url, host) {
         // Speedtest
         "*.speedtest.co",
         "*.speedtest.net",
-        
+
+       //cloudflare и др
+       "*.cloudflareaccess.com",
+       
+
         // Соцсети: Instagram/Facebook
         "*.instagram.com",
         "*.cdninstagram.com",
