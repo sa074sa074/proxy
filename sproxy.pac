@@ -51,6 +51,7 @@ function FindProxyForURL(url, host) {
         "tweetdeck.com",
         
         // WhatsApp/Viber (добавлены все новые домены)
+        "static.whatsapp.net",
         "web.whatsapp.com",
         "*whatsapp.com",
         "*.whatsapp.com",
